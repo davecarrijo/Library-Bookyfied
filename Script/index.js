@@ -1,23 +1,14 @@
 let library;
 const DEFAULT_DATA = [
+  { name: "Tsutomu Sato ", author: "Tsutomu Sato ", status: "read" },
   {
-    name: "The Lord of the Rings",
-    author: "Tolkien",
-    pages: 120,
-    status: "read"
-  },
-  {
-    name: "Alice in Wonderland",
-    author: "Lewis Caroll",
-    pages: 120,
+    name: "Cage of Eden",
+    author: " Yoshinobu Yamada",
     status: "not read"
-  },
-  { name: "Naruto", author: "Masashi Kishimoto", pages: "120", status: "read" },
-  { name: "Naruto", author: "Masashi Kishimoto", pages: "120", status: "read" }
+  }
 ];
 const $name = document.querySelector("#name");
 const $author = document.querySelector("#author");
-const $pages = document.querySelector("#pages");
 const $status = document.querySelector("#status");
 const $tableBody = document.querySelector("#book-table-body");
 const $form = document.querySelector("form").addEventListener("submit", (e) => {
@@ -41,17 +32,16 @@ const $table = document
   });
 
 class Book {
-  constructor(name, author, pages, status) {
+  constructor(name, author, status) {
     this.name = name;
     this.author = author;
-    this.pages = pages;
     this.status = status;
   }
 }
 
 function addBookToLibrary() {
   if ($name.value.length === 0 || $author.value.length === 0) {
-    alert("Please, fill all the fields");
+    alert("Please, fill all the fields before proceed");
     return;
   }
   const newBook = new Book($name.value, $author.value, $status.value);
@@ -79,7 +69,6 @@ function findBook(libraryArray, name) {
 function clearForm() {
   $name.value = "";
   $author.value = "";
-  $pages.value = "";
 }
 function updateLocalStorage() {
   localStorage.setItem("library", JSON.stringify(library));
@@ -101,7 +90,6 @@ function render() {
       <tr>
         <td>${book.name}</td>
         <td>${book.author}</td>
-        <td>${book.pages}</td>
         <td><button class="status-button">${book.status}</button></td>
         <td><button class="delete">delete</button></td>
       </tr>

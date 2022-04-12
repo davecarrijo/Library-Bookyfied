@@ -18,27 +18,38 @@
 
 
 
+<!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+
+   <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
   </head>
   <body>
 
 
-    <section class="Container_1">
+    <div class="container">
        <!-- Header and first page interface. -->
     <div id="header">
-      <div id="headerLogo">
+      <div >
         <img
           src="/img/icons/icon_bokyfied.svg"
           alt=""
           class="d-inline-block align-text-top"
           id="headerLogo_svg"
         />
-        <h1 class="display-5">Bookyfied</h1>
+        <h1>Bookyfied</h1>
       </div>
     </div>
     </section>
     <!-- Secondary Page interface–––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container_2">
-      </div>
+
       <div class="row">
         <form action="">
           <div class="five columns">
@@ -49,10 +60,7 @@
             <label for="author">Author</label>
             <input type="text" class="u-full-width" id="author" />
           </div>
-          <div class="">
-            <label for="pages">Pages</label>
-            <input type="text" class="u-full-width" id="pages" />
-          </div>
+
           <div class="two columns">
             <label for="status">Status</label>
             <select name="status" id="status" class="u-full-width">
@@ -69,7 +77,7 @@
           <tr>
             <th>Name</th>
             <th>Author</th>
-            <th>Pages</th>
+
             <th>Status</th>
             <th></th>
           </tr>
@@ -77,12 +85,12 @@
         </table>
       </div>
     </div>
-    <section class="Container_3">
+
       <h3>What is this thing?</h3>
       <p>
-        Bookyfied is light-weight book tracking web application built on HTML, CSS,
-        and vanilla JavaScript, with a heavy utilization of the Web Storage API.
-        It was created in partial completion of<a href="www.theodinproject.com">
+        Bookyfied is light App web based book tracking web application built on HTML, CSS,
+        and vanilla JavaScript.
+        It was created for the completion of LIBRARY project of <a href="www.theodinproject.com">
           The Odin Project's</a
         >
         Full Stack JavaScript Path curriculum.
@@ -90,7 +98,10 @@
 
 
       <a class="git_hub " href="https://github.com/davecarrijo">Visit GitHub Repository</a>
-    </section>
+      <div class="copyright">
+        <h7>MIT License</h7>
+        <p class="text-muted">Copyright © 2022 David Carrijo </p>
+    </div>
   </body>
   <!-- Java Script -->
   <script src="/script/index.js"></script>
