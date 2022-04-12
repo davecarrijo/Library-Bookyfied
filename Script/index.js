@@ -22,7 +22,8 @@ const $table = document
   .addEventListener("click", (e) => {
     const currentTarget = e.target.parentNode.parentNode.childNodes[1];
     if (e.target.innerHTML == "delete") {
-      deleteBook(findBook(library, currentTarget.innerText));
+      if (confirm(`are you sure you want to delete ${currentTarget.innerText}`))
+        deleteBook(findBook(library, currentTarget.innerText));
     }
     if (e.target.classList.contains("status-button")) {
       changeStatus(findBook(library, currentTarget.innerText));
@@ -41,7 +42,7 @@ class Book {
 
 function addBookToLibrary() {
   if ($name.value.length === 0 || $author.value.length === 0) {
-    alert("Please, fill all the fields before proceed");
+    alert("Please, fill all the fields");
     return;
   }
   const newBook = new Book($name.value, $author.value, $status.value);
