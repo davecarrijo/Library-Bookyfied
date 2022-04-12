@@ -12,7 +12,7 @@ const DEFAULT_DATA = [
     pages: 120,
     status: "not read"
   },
-  { name: "Naruto", author: "Masashi Kishimoto", pages: "120", status: "read" }
+  { name: "Naruto", author: "Masashi Kishimoto", pages: "120", status: "read" },
   { name: "Naruto", author: "Masashi Kishimoto", pages: "120", status: "read" }
 ];
 const $name = document.querySelector("#name");
