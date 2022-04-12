@@ -1,0 +1,2 @@
+base color : rgb(132, 121, 151);
+hover color: rgb(64, 60, 73);
