@@ -13,3 +13,4 @@ I was asked to do it locally but it was a great opportunity to learn and apply
 LocalStorage, so... I did it. I learned about the basics of it using the Mozilla documentation
 
 The clean and beautiful layout is thanks to [Skeleton](http://getskeleton.com/), after I see read some of the people codes exemples.
+<img src="https://i.imgur.com/qEkE5YV.png">
